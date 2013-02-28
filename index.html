@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive logging example</title>
+    <link href="css/interactive-example.css" rel="stylesheet">
+
+
+    <meta content="initial-scale=1.0; maximum-scale=1.0; user-scalable=no" name="viewport"/>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" type="text/css" href="http://web.logdirector.com/wp-content/themes/whitelight/style.css" media="screen" />
+    <link rel="pingback" href="http://web.logdirector.com/xmlrpc.php" />
+    <link rel="alternate" type="application/rss+xml" title="LOGDIRECTOR &raquo; Feed" href="http://web.logdirector.com/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="LOGDIRECTOR &raquo; Comments Feed" href="http://web.logdirector.com/comments/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="LOGDIRECTOR &raquo; logdirector features Comments Feed" href="http://web.logdirector.com/logdirector-features/feed/" />
+    <link rel='stylesheet' id='woo-layout-css'  href='http://web.logdirector.com/wp-content/themes/whitelight/css/layout.css?ver=3.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='wp_dlmp_styles-css'  href='http://web.logdirector.com/wp-content/plugins/download-monitor/page-addon/styles.css?ver=3.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='prettyPhoto-css'  href='http://web.logdirector.com/wp-content/themes/whitelight/includes/css/prettyPhoto.css?ver=3.5' type='text/css' media='all' />
+    <script type='text/javascript' src='http://web.logdirector.com/wp-includes/js/comment-reply.min.js?ver=3.5'></script>
+    <script type='text/javascript' src='http://web.logdirector.com/wp-includes/js/jquery/jquery.js?ver=1.8.3'></script>
+    <script type='text/javascript' src='http://web.logdirector.com/wp-content/themes/whitelight/includes/js/third-party.js?ver=3.5'></script>
+    <script type='text/javascript' src='http://web.logdirector.com/wp-content/themes/whitelight/includes/js/general.js?ver=3.5'></script>
+    <script type='text/javascript' src='http://web.logdirector.com/wp-content/themes/whitelight/includes/js/uniform.js?ver=3.5'></script>
+    <script type='text/javascript' src='http://web.logdirector.com/wp-content/themes/whitelight/includes/js/jquery.prettyPhoto.js?ver=3.5'></script>
+    <script type='text/javascript' src='http://web.logdirector.com/wp-content/themes/whitelight/includes/js/enable-lightbox.js?ver=3.5'></script>
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://web.logdirector.com/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://web.logdirector.com/wp-includes/wlwmanifest.xml" />
+    <link rel='prev' title='Test the logdirector log server' href='http://web.logdirector.com/test-the-logdirector-log-server/' />
+    <meta name="generator" content="WordPress 3.5" />
+    <link rel='canonical' href='http://web.logdirector.com/logdirector-features/' />
+    <style type='text/css'>
+        .download-info .download-button {
+            background-image: url(http://web.logdirector.com/wp-content/plugins/download-monitor/page-addon/downloadbutton.gif);
+        }
+        .download-info .more-button {
+            background-image: url(http://web.logdirector.com/wp-content/plugins/download-monitor/page-addon/morebutton.gif);
+        }
+    </style>
+
+    <!-- Theme version -->
+    <meta name="generator" content="Whitelight 1.3.2" />
+    <meta name="generator" content="WooFramework 5.4.2" />
+
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!--  Mobile viewport scale | Disable user zooming as the layout is optimised -->
+    <meta content="initial-scale=1.0" name="viewport"/>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var screen_res = "2560 x 1440";
+        //]]>
+    </script>
+    <!-- Woo Custom Styling -->
+    <style type="text/css">
+        .ie #header { filter: none; }
+        #header { background-image: url( http://web.logdirector.com/wp-content/uploads/paper.png ) !important; }
+        #header { background-repeat: repeat !important; }
+        #header { background-position: top left !important; }
+        #intro { background-image: url( http://web.logdirector.com/wp-content/uploads/paper.png ) !important; }
+        #intro { background-repeat: repeat !important; }
+        #intro { background-position: top left !important; }
+        a { color: orange !important; }
+        a:hover, .post-more a:hover, .post-meta a:hover, .post p.tags a:hover { color: orange !important; }
+        a.button, #commentform #submit, #contact-page .submit, body input[type="submit"] { background: transparent !important; border-color: transparent !important; filter: none; }
+        a.button:hover, a.button.hover, a.button.active, #commentform #submit:hover, #contact-page .submit:hover, body input[type="submit"] { background: transparent !important; opacity: 0.9; }
+        .nav a:hover, .nav li ul, .nav li.current_page_item a, .nav li.current_page_parent a, .nav li.current-menu-ancestor a, .nav li.current-cat a, .nav li.li.current-menu-item a, .nav li:hover > a { background-color: orange !important; }
+    </style>
+
+    <!-- Google Webfonts -->
+    <link href="http://fonts.googleapis.com/css?family=Signika:300,400,600" rel="stylesheet" type="text/css" />
+
+    <!-- Alt Stylesheet -->
+    <link href="http://web.logdirector.com/wp-content/themes/whitelight/styles/default.css" rel="stylesheet" type="text/css" />
+
+    <!-- Custom Favicon -->
+    <link rel="shortcut icon" href="http://web.logdirector.com/wp-content/uploads/favicon.ico"/>
+
+    <!-- Woo Shortcodes CSS -->
+    <link href="http://web.logdirector.com/wp-content/themes/whitelight/functions/css/shortcodes.css" rel="stylesheet" type="text/css" />
+
+    <!-- Custom Stylesheet -->
+    <link href="http://web.logdirector.com/wp-content/themes/whitelight/custom.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body style="padding: 50px;">
+
+<section class="entry">
+    <div class="feature-container">
+        <div class="feature-box">
+            <div class="feature-tile activeTile" style="display: block;">
+                <div class="title-center">
+                    <div class="title-text">
+                        <div class="feature-entry halb">
+                            <div class="feature-entry-codeblock" data-bind="template: {name: 'template-example', data: httpExample}"></div>
+                        </div>
+                        <div class="feature-entry halb">
+                            <div class="feature-entry-codeblock" data-bind="template: {name: 'template-example', data: apiExample}"></div>
+                        </div>
+                        <div class="feature-entry halb">
+                            <div class="feature-entry-codeblock" data-bind="template: {name: 'template-example', data: codeGenerationExample}"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="title-top"></div>
+                <div class="title-bottom"></div>
+                <div class="title-right"></div>
+                <div class="title-left"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script src="lib/jquery-1.9.min.js"></script>
+<script src="lib/knockout-2.2.1.min.js"></script>
+<script src="lib/logdirector-js-client.js"></script>
+<script src="js/interactive-example.js"></script>
+
+<script type="text/html" id="template-example">
+
+    <div class="example-container">
+
+        <div data-bind="foreach: tabs">
+            <a class="example-title" href="#" data-bind="click: $parent.selectTab, css: {'example-title-selected': $parent.selectedTab().title() == title()}">
+                <span data-bind="text: title"></span>
+            </a>
+        </div>
+
+        <div class="example-codeblock example-codetext" data-bind="template: {name: selectedTab().templateId(), data: selectedTab}"></div>
+
+        <div data-bind="visible: isShowLogButton">
+
+            <div class="example-vspacer"></div>
+
+            <div style="float: left;">
+                <a href="#" class="woo-sc-button dark silver" data-bind="click: $root.log">Log</a>
+            </div>
+
+            <div style="margin-left: 50px;">
+                <span data-bind="text: $root.sentEventsDisplayText, visible: $root.isEventSent"></span> <span data-bind="visible: $root.isEventSent">Click <a class="green" target="_blank" data-bind="attr: {'href': $root.viewUrl}">here</a> to view your logged data.</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</script>
+
+<script type="text/html" id="template-http">
+
+    http://test.logdirector.com/logdirector/log<br>
+    <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;?app=<span data-bind="text: $root.applicationKey"></span>
+    </div>
+    <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&type=<input type="text" class="example-codetext-input" data-bind="value: $root.eventKey, valueUpdate: 'afterkeydown', attr: {size: $root.eventKeyLength}, event: {focus: $root.inputFocus, blur: $root.inputBlur, mouseup: $root.inputMouseUp}">
+    </div>
+    <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&result:string=<input type="text" class="example-codetext-input" data-bind="value: $root.resultValue, valueUpdate: 'afterkeydown', attr: {size: $root.resultValueLength}, event: {focus: $root.inputFocus, blur: $root.inputBlur, mouseup: $root.inputMouseUp}">
+    </div>
+    <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&mails_delivered:integer=<input type="text" class="example-codetext-input" data-bind="value: $root.mailsDeliveredValue, valueUpdate: 'afterkeydown', attr: {size: $root.mailsDeliveredValueLength}, event: {focus: $root.inputFocus, blur: $root.inputBlur, mouseup: $root.inputMouseUp}">
+    </div>
+    <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&duration:decimal=<input type="text" class="example-codetext-input" data-bind="value: $root.durationValue, valueUpdate: 'afterkeydown', attr: {size: $root.durationValueLength}, event: {focus: $root.inputFocus, blur: $root.inputBlur, mouseup: $root.inputMouseUp}">
+    </div>
+
+</script>
+
+<script type="text/html" id="template-api-java">
+
+    LogdirectorLogger.initialize(
+    &nbsp;&nbsp;&nbsp;&nbsp;"http://test.logdirector.com/logdirector",
+    &nbsp;&nbsp;&nbsp;&nbsp;"</span><span data-bind="text: $root.applicationKey"></span>");<br>
+    Event.create("<input type="text" class="example-codetext-input" data-bind="value: $root.eventKey, valueUpdate: 'afterkeydown', attr: {size: $root.eventKeyLength}, event: {focus: $root.inputFocus, blur: $root.inputBlur, mouseup: $root.inputMouseUp}">")
+    <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;.setStringAttribute("result", "<input type="text" class="example-codetext-input" data-bind="value: $root.resultValue, valueUpdate: 'afterkeydown', attr: {size: $root.resultValueLength}, event: {focus: $root.inputFocus, blur: $root.inputBlur, mouseup: $root.inputMouseUp}">")
+    </div>
+    <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;.setNumberAttribute("mails_delivered", <input type="text" class="example-codetext-input" data-bind="value: $root.mailsDeliveredValue, valueUpdate: 'afterkeydown', attr: {size: $root.mailsDeliveredValueLength}, event: {focus: $root.inputFocus, blur: $root.inputBlur, mouseup: $root.inputMouseUp}">)
+    </div>
+    <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;.setDecimalAttribute("duration", <input type="text" class="example-codetext-input" data-bind="value: $root.durationValue, valueUpdate: 'afterkeydown', attr: {size: $root.durationValueLength}, event: {focus: $root.inputFocus, blur: $root.inputBlur, mouseup: $root.inputMouseUp}">)
+    </div>
+    <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;.log();
+    </div>
+
+</script>
+
+<script type="text/html" id="template-api-csharp">
+
+    LogdirectorLogger.Initialize(
+    &nbsp;&nbsp;&nbsp;&nbsp;"http://test.logdirector.com/logdirector",
+    &nbsp;&nbsp;&nbsp;&nbsp;"<span data-bind="text: $root.applicationKey"></span>");<br>
+    Event.Create("<input type="text" class="example-codetext-input" data-bind="value: $root.eventKey, valueUpdate: 'afterkeydown', attr: {size: $root.eventKeyLength}, event: {focus: $root.inputFocus, blur: $root.inputBlur, mouseup: $root.inputMouseUp}">")
+    <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;.SetStringAttribute("result", "<input type="text" class="example-codetext-input" data-bind="value: $root.resultValue, valueUpdate: 'afterkeydown', attr: {size: $root.resultValueLength}, event: {focus: $root.inputFocus, blur: $root.inputBlur, mouseup: $root.inputMouseUp}">")
+    </div>
+    <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;.SetNumberAttribute("mails_delivered", <input type="text" class="example-codetext-input" data-bind="value: $root.mailsDeliveredValue, valueUpdate: 'afterkeydown', attr: {size: $root.mailsDeliveredValueLength}, event: {focus: $root.inputFocus, blur: $root.inputBlur, mouseup: $root.inputMouseUp}">)
+    </div>
+    <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;.SetDecimalAttribute("duration", <input type="text" class="example-codetext-input" data-bind="value: $root.durationValue, valueUpdate: 'afterkeydown', attr: {size: $root.durationValueLength}, event: {focus: $root.inputFocus, blur: $root.inputBlur, mouseup: $root.inputMouseUp}">)
+    </div>
+    <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;.Log();
+    </div>
+
+</script>
+
+<script type="text/html" id="template-codegen-java">
+
+    LogdirectorLogger.initialize(
+    &nbsp;&nbsp;&nbsp;&nbsp;"http://test.logdirector.com/logdirector",
+    &nbsp;&nbsp;&nbsp;&nbsp;"<span data-bind="text: $root.applicationKey"></span>");<br>
+    MailJobFinished.create()
+    <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;.setResult("<input type="text" class="example-codetext-input" data-bind="value: $root.resultValue, valueUpdate: 'afterkeydown', attr: {size: $root.resultValueLength}, event: {focus: $root.inputFocus, blur: $root.inputBlur, mouseup: $root.inputMouseUp}">")
+    </div>
+    <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;.setMailsDelivered(<input type="text" class="example-codetext-input" data-bind="value: $root.mailsDeliveredValue, valueUpdate: 'afterkeydown', attr: {size: $root.mailsDeliveredValueLength}, event: {focus: $root.inputFocus, blur: $root.inputBlur, mouseup: $root.inputMouseUp}">)
+    </div>
+    <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;.setDuration(<input type="text" class="example-codetext-input" data-bind="value: $root.durationValue, valueUpdate: 'afterkeydown', attr: {size: $root.durationValueLength}, event: {focus: $root.inputFocus, blur: $root.inputBlur, mouseup: $root.inputMouseUp}">)
+    </div>
+    <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;.log();
+    </div>
+
+</script>
+
+<script type="text/html" id="template-codegen-csharp">
+
+    LogdirectorLogger.Initialize(
+    &nbsp;&nbsp;&nbsp;&nbsp;"http://test.logdirector.com/logdirector",
+    &nbsp;&nbsp;&nbsp;&nbsp;"<span data-bind="text: $root.applicationKey"></span>");<br>
+    MailJobFinished.Create()
+    <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;.SetResult("<input type="text" class="example-codetext-input" data-bind="value: $root.resultValue, valueUpdate: 'afterkeydown', attr: {size: $root.resultValueLength}, event: {focus: $root.inputFocus, blur: $root.inputBlur, mouseup: $root.inputMouseUp}">")
+    </div>
+    <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;.SetMailsDelivered(<input type="text" class="example-codetext-input" data-bind="value: $root.mailsDeliveredValue, valueUpdate: 'afterkeydown', attr: {size: $root.mailsDeliveredValueLength}, event: {focus: $root.inputFocus, blur: $root.inputBlur, mouseup: $root.inputMouseUp}">)
+    </div>
+    <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;.SetDuration(<input type="text" class="example-codetext-input" data-bind="value: $root.durationValue, valueUpdate: 'afterkeydown', attr: {size: $root.durationValueLength}, event: {focus: $root.inputFocus, blur: $root.inputBlur, mouseup: $root.inputMouseUp}">)
+    </div>
+    <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;.Log();
+    </div>
+
+</script>
+
+<script type="text/javascript">
+
+    var app = new App();
+
+    ko.applyBindings(app);
+
+</script>
+
+</body>
+</html>
